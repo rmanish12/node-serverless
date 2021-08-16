@@ -1,0 +1,7 @@
+curl --location --request POST 'https://sls-nodejs-test.eu.auth0.com/oauth/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'client_id=zDn23kJxZ2Wv4Cd9tO4vQENGN4u6GIQc' \
+--data-urlencode 'username=ranjan.manish421@gmail.com' \
+--data-urlencode 'password=Auth0Test' \
+--data-urlencode 'grant_type=password' \
+--data-urlencode 'scope=openid'

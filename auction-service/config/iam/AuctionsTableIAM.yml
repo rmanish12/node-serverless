@@ -1,0 +1,12 @@
+AuctionsTableIAM:
+  Effect: Allow
+  Action:
+    - dynamoDb:PutItem
+    - dynamoDb:Scan
+    - dynamoDb:GetItem
+    - dynamoDb:UpdateItem
+    - dynamoDb:Query
+  Resource:
+    - ${self:custom.AuctionsTable.arn} #using this to make it dynamic and controlled from the central serverless file
+    - !Join ["/", ["${self:custom.AuctionsTable.arn}", "index", "statusAndEndingAt"]]
+    # - arn:aws:dynamodb:#{AWS::Region}:#{AWS::AccountId}:table/AuctionsTable
